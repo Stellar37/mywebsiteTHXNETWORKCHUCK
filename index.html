@@ -6,22 +6,42 @@
     <title>Accessible AI-Powered Mental Wellness Support</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #4A6572;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 30px auto;
             background-color: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
             color: #333;
+        }
+        h2 {
+            color: #4A6572;
         }
         p {
             line-height: 1.6;
@@ -29,26 +49,55 @@
         }
         .button {
             display: inline-block;
-            background-color: #007bff;
+            background-color: #728999;
             color: #fff;
             padding: 12px 20px;
             border-radius: 5px;
             text-decoration: none;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #4A6572;
         }
-        .placeholder {
-            background-color: #eee;
-            padding: 50px;
-            text-align: center;
-            margin-top: 20px;
+        .chat-container {
+            border: 1px solid #ccc;
             border-radius: 8px;
+            margin-top: 20px;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+        .user-message {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .ai-message {
+            background-color: #f0f0f0;
+            align-self: flex-start;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #555;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
     <div class="container">
         <h1>Welcome to Your AI Mental Wellness Companion</h1>
         <p>Experience a new way to support your mental well-being with our personalized AI counselor. Designed to understand your unique needs and provide tailored guidance, our platform makes mental wellness support more accessible and affordable.</p>
@@ -60,14 +109,17 @@
             <li><b>Confidential and Secure:</b> Your privacy is our top priority. All interactions are confidential.</li>
         </ul>
 
-        <div class="placeholder">
-            [Future AI Chat Interface - Placeholder]
+        <div class="chat-container">
+            <div class="chat-message user-message">Hi there!</div>
+            <div class="chat-message ai-message">The AI would respond to you if the API integration was done lol</div>
         </div>
 
         <p>Ready to start your journey to better mental wellness? Sign up today and experience the difference.</p>
         <a href="#" class="button">Sign Up Now</a>
         <a href="#" class="button">Learn More</a>
+    </div>
 
+    <div class="footer">
         <p><b>Important:</b> This is a demonstration website. The AI counselor is not yet functional. This platform is not a replacement for professional therapy.</p>
     </div>
 </body>
